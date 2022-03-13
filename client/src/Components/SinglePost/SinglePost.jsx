@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useLocation } from "react-router";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./SinglePost.css";
 import { useContext } from "react";
 import { Context } from "../../Context/Context";
-
+import axiosInstance from "../../config"
 const SinglePost = () => {
   const location = useLocation();
   const pathId = location.pathname.split("/")[2];
@@ -15,10 +15,10 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [update, setUpdate] = useState(false);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://blogapp-fitness.herokuapp.com/images/";
   useEffect(() => {
     const fetchSinglePost = async () => {
-      const res = await axios.get(`/posts/${pathId}`);
+      const res = await axiosInstance.get(`/posts/${pathId}`);
 
       setSinglePost(res.data);
       setTitle(res.data.title);
@@ -29,7 +29,7 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`/posts/${singlePost._id}`, {
+      const res = await axiosInstance.delete(`/posts/${singlePost._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -38,7 +38,7 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`/posts/${singlePost._id}`, {
+      const res = await axiosInstance.put(`/posts/${singlePost._id}`, {
         username: user.username,
         title,
         desc,
