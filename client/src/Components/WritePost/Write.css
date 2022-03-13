@@ -1,0 +1,94 @@
+
+.writePost{
+    padding-top:50px;
+    position: relative;
+}
+
+
+.writeFormGroup{
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.writeIcon{
+    width:25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+#fileInput{
+    display: none;
+}
+
+
+
+.writeInput{
+    border:1px solid gray;
+    margin: 10px;
+    padding:30px;
+    font-size:2rem;
+    width:70vw;
+}
+
+.writeInput:focus{
+    outline: none;
+}
+.writeText{
+    font-size:1.5rem;
+    border: none;
+    height:30vh;
+    margin-left:35px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+
+.writeSubmit{
+    position:absolute;
+    top:50px;
+    right:50px;
+    padding:20px;
+    background-color: aqua;
+    color: black;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.writeImg{
+    margin-left: 150px;
+    width:70vw;
+    object-fit: cover;
+    border-radius: 15px;
+    height:250px;
+}
+
+
+
+@media screen and (max-width:1025px) {
+    .writeImg{
+        margin-left: 50px;
+    }
+    .writeSubmit{
+        top:100%;
+        transform: translate(-50%,50%);
+    }
+}
+
+@media screen and (max-width:1025px) {
+    .writeInput{
+        width: 70%;
+    }
+    .writeFormGroup{
+        margin-left:10px;
+    }
+
+}

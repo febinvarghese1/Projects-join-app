@@ -1,0 +1,69 @@
+/* Header Styling */
+
+.header {
+  min-height: 100vh;
+}
+.header-titles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: crimson;
+}
+
+.primary-title {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 1.4rem;
+  z-index: 1;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+}
+.secondary-title {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  font-size: 4rem;
+  z-index: 1;
+  font-weight: 500;
+  font-family: var(--title-font);
+}
+
+#HeaderImage-1 {
+  margin-top: 1rem;
+  width: 100%;
+  height: calc(100vh - 20vh);
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  z-index: -1;
+}
+#HeaderImage-2 {
+  width: 100%;
+  height: calc(100vh - 10vh);
+  object-fit: cover;
+  background-position: center top;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+.cross-line {
+  width: 100%;
+  height: 5px;
+  background-image: linear-gradient(to right, red, black);
+  transform: rotateZ(6deg);
+}
+
+@media screen and (max-width: 426px) {
+  .header-wrapper {
+    width: 100%;
+  }
+  #HeaderImgae-1 {
+    background-position: center;
+  }
+  .secondary-title {
+    font-size: 2rem;
+  }
+  .cross-line{
+    transform: rotateZ(20deg)
+  }
+}
