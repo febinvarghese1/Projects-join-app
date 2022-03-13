@@ -91,7 +91,7 @@
   font-weight: 700;
   font-size:1.2rem;
   color: black;
-  font-style: italic;
+  font-family: var(--content-font);
 }
 .Toggle-Menu {
   position: absolute;
