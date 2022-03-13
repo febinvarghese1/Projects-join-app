@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./SinglePost.css";
 import { useContext } from "react";
 import { Context } from "../../Context/Context";
-import axiosInstance from "../../config"
+import { axiosInstance } from "../../config";
 const SinglePost = () => {
   const location = useLocation();
   const pathId = location.pathname.split("/")[2];
