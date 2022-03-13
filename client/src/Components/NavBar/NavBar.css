@@ -88,17 +88,18 @@
   margin-bottom: 12px;
   padding: 20px;
   font-family: serif;
-  font-weight: 700;
-  font-size:1.2rem;
+  font-weight: 600;
+  font-size:1.1rem;
   color: black;
   font-family: var(--content-font);
+  text-transform: capitalize;
 }
 .Toggle-Menu {
   position: absolute;
   top: 0%;
   right: 0%;
   min-height: 100vh;
-  background-image: linear-gradient(120deg, whitesmoke, rgb(255, 149, 149));
+  background-image: linear-gradient(120deg, whitesmoke, rgb(77, 77, 77));
   z-index: 80;
 }
 
