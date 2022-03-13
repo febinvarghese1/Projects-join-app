@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 import { Link } from "react-router-dom";
 const Post = ({ props }) => {
-  const PF = "https://fitnessblog-app.herokuapp.com/images/";
+  const PF = "https://blogapp-fitness.herokuapp.com/images/";
   return (
     <div className="post">
       {props.photo ? (
