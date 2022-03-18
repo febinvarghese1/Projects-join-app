@@ -1,3 +1,4 @@
+//required modules
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -5,6 +6,7 @@ const multer = require("multer");
 const path = require("path");
 const app = express();
 
+//required route modules
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/post");
@@ -34,6 +36,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+//path routing
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
@@ -45,6 +48,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 
+//server running in backend
 app.listen(process.env.PORT || 5000, () =>
   console.log("Server is started... ")
 );
